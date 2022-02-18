@@ -71,7 +71,7 @@
       </div>
       <div class="modal-body">
 
-        <form action="<?= BASEURL; ?>/resepsionis/tambah" method="post">
+        <form action="<?= BASEURL; ?>/resepsionis/tambahByResepsionis" method="post">
 
           <div class="mb-1">
             <label for="nama-pemesanan" class="col-form-label">Nama Pemesanan:</label>

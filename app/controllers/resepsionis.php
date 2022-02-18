@@ -12,23 +12,22 @@ class Resepsionis extends Controller {
 
     public function tambahByResepsionis()
     {
+        var_dump("tambahByResepsionis ");
+        // if ($this->model('Resepsionis_model')->tambahPemesananByResepsionis($_POST) > 0) {
+        //     Flasher::setFlash('Pesan Kamar ', ' berhasil', 'dibuat', 'success');
+        //     header('Location: '. BASEURL . '/resepsionis');
+        //     exit;
+        // } else {
+        //     Flasher::setFlash('Pesan Kamar ', ' gagal', 'dibuat', 'danger');
+        //     header('Location: '. BASEURL . '/resepsionis');
+        //     exit;
+        // }
+
         if ($this->model('Resepsionis_model')->tambahPemesananByResepsionis($_POST) > 0) {
             Flasher::setFlash('Pesan Kamar ', ' berhasil', 'dibuat', 'success');
             header('Location: '. BASEURL . '/resepsionis');
             exit;
-        } else {
-            Flasher::setFlash('Pesan Kamar ', ' gagal', 'dibuat', 'danger');
-            header('Location: '. BASEURL . '/resepsionis');
-            exit;
-        }
-
-        // if ($this->model('Resepsionis_model')->tambahPemesananByResepsionis($_POST) > 0) {
-        //     var_dump("HELLO MASUK tambahPemesananByResepsionis");
-        //     Flasher::setFlash('Pesan Kamar ', ' berhasil', 'dibuat', 'success');
-        //     header('Location: '. BASEURL . '/resepsionis');
-        //     exit;
-        // } 
-        
+        } 
     }
 
     public function detail($id) 

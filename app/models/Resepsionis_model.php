@@ -18,13 +18,16 @@ class Resepsionis_model {
         $this->db->bind('phone', $data['no-hp']);
         $this->db->bind('nama_tamu', $data['nama-tamu']);
         $this->db->bind('tipe_fasilitas', $data['tipe-kamar']);
-        $this->db->bind('check_in', $data['check-in']);
-        $this->db->bind('check_out', $data['check-out']); 
+        // $this->db->bind('check_in', $data['check-in']);
+        // $this->db->bind('check_out', $data['check-out']); 
+        $this->db->bind('check_in', $this->formatDate(date('m-d-Y')));
+        $this->db->bind('check_out',$this->formatDate(date('m-d-Y'))); 
         $this->db->bind('total_kamar', $data['jumlah-kamar']); 
         $this->db->bind('status_pemesanan', $data['status-pemesanan']);
         $this->db->bind('created_at', $this->formatDate(date('m-d-Y')));
         $this->db->bind('updated_at', $this->formatDate(date('m-d-Y')));
 
+        var_dump("MASUK tambahPemesananByResepsionis", $data);
         $this->db->execute();
         return $this->db->rowCount();
     }
