@@ -24,17 +24,14 @@ class Pemesanan_model {
         $this->db->bind('status_pemesanan', 'terima');
         $this->db->bind('created_at', $this->formatDate(date('m-d-Y')));//MASIH HARDCODE
         $this->db->bind('updated_at', $this->formatDate(date('m-d-Y')));//MASIH HARDCODE
-        var_dump("DATA DARU QUERY => ", $query);
 
-        var_dump("NILAI ==>  ",$this->db->rowCount());
         $this->db->execute();
         return $this->db->rowCount();
     }
 
     public function formatDate($dateString)
     {
-        $dp = DateTime::createFromFormat("m-d-Y", $dateString);
-        $dpstr = $dp->format('Y-m-d');
-        return $dpstr;
+        $newDate = date("Y-m-d", strtotime($dateString));  
+        return $newDate;
     }
 }

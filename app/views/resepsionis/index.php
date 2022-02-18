@@ -104,9 +104,8 @@
 
           <div class="mb-1">
             <label for="check-in" class="col-form-label">Check In:</label>
-            <!-- <input type="text" class="form-control" id="check-in" name="check-in"> -->
             <div class="input-group date">
-              <input type="text" class="form-control" id="check-in" name="check-in">
+              <input type="text" class="form-control" id="check-in" name="check-in" autocomplete="off">
               <span class="input-group-append">
                 <span class="input-group-text bg-white d-block">
                   <i class="fa fa-calendar"></i>
@@ -117,9 +116,8 @@
 
           <div class="mb-1">
             <label for="check-out" class="col-form-label">Check Out:</label>
-            <!-- <input type="text" class="form-control" id="check-out" name="check-out"> -->
             <div class="input-group date">
-              <input type="text" class="form-control" id="check-out" name="check-out">
+              <input type="text" class="form-control" id="check-out" name="check-out" autocomplete="off">
               <span class="input-group-append">
                 <span class="input-group-text bg-white d-block">
                   <i class="fa fa-calendar"></i>
