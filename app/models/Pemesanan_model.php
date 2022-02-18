@@ -26,8 +26,8 @@ class Pemesanan_model {
         $this->db->bind('check_out', $this->formatDate('')); //MASIH HARDCODE
         $this->db->bind('total_kamar', 3); //MASIH HARDCODE
         $this->db->bind('status_pemesanan', 'terima');
-        $this->db->bind('created_at', $this->formatDate(date('m-d-Y')));//MASIH HARDCODE
-        $this->db->bind('updated_at', $this->formatDate(date('m-d-Y')));//MASIH HARDCODE
+        $this->db->bind('created_at', $this->formatDate(''));//MASIH HARDCODE
+        $this->db->bind('updated_at', $this->formatDate(''));//MASIH HARDCODE
         var_dump($data);
         $this->db->execute();
         return $this->db->rowCount();

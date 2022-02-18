@@ -6,21 +6,22 @@
 
   <div class="pb-2 d-flex justify-content-between">
     <div class="p-2">
-      <form>
+      <form  action="<?= BASEURL; ?>/resepsionis/caribydate" method="post" class="d-flex">
         <div class="input-group date" id="datepicker">
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" name="keyword" id="keyword" autocomplete="off">
           <span class="input-group-append">
             <span class="input-group-text bg-white d-block">
               <i class="fa fa-calendar"></i>
             </span>
           </span>
+          <button class="btn btn-outline-primary" type="submit" id="tombolCariByDate">Cari tanggal</button>
         </div>
       </form>
     </div>
     <div class="p-2">
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form action="<?= BASEURL; ?>/resepsionis/cari" method="post" class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Cari nama tamu..." aria-label="Search" name="keyword" id="keyword" autocomplete="off">
+        <button class="btn btn-outline-primary" type="submit" id="tombolCari">Cari</button>
       </form>
     </div>
   </div>
@@ -52,7 +53,7 @@
           <td><?= $tamu['status_pemesanan']; ?></td>
           <td class="d-flex justify-content-evenly">
             <a href="<?= BASEURL; ?>/resepsionis/detail/<?= $tamu['id'] ?>" class="btn btn-info btn-sm" data-bs-target="#exampleModal">Detail</a>
-            <a href="<?= BASEURL; ?>/resepsionis/ubah/<?= $tamu['id'] ?>" class="btn btn-primary btn-sm tampilModalUbah" data-bs-toggle="modal" data-bs-target="#idModalResepsionis" data-id="<?=$tamu['id']; ?>">Ubah</a>
+            <a href="<?= BASEURL; ?>/resepsionis/ubah/<?= $tamu['id'] ?>" class="btn btn-primary btn-sm tampilModalUbah" data-bs-toggle="modal" data-bs-target="#idModalResepsionis" data-id="<?= $tamu['id']; ?>">Ubah</a>
             <a href="<?= BASEURL; ?>/resepsionis/hapus/<?= $tamu['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('yakin?')">Hapus</a>
           </td>
         </tr>
@@ -72,7 +73,7 @@
       <div class="modal-body">
 
         <form action="<?= BASEURL; ?>/resepsionis/tambahByResepsionis" method="post">
-
+          <input type="hidden" name="id" id="id">
           <div class="mb-1">
             <label for="nama-pemesanan" class="col-form-label">Nama Pemesanan:</label>
             <input type="text" class="form-control" id="nama-pemesanan" name="nama-pemesanan">
