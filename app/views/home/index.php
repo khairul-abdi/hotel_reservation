@@ -40,9 +40,9 @@
   </div>
   <div class="d-flex">
     <div class="p-2 pt-0">
-      <form action="<?= BASEURL; ?>/pemesanan/tambah" method="post">
-        <div class="input-group date" id="datepickerCheckIn" name="datepickerCheckIn">
-          <input type="text" class="form-control">
+      <form>
+        <div class="input-group date">
+          <input type="text" class="form-control" id="datepickerCheckIn" name="datepickerCheckIn">
           <span class="input-group-append">
             <span class="input-group-text bg-white d-block">
               <i class="fa fa-calendar"></i>
@@ -53,8 +53,8 @@
     </div>
     <div class="p-2 pt-0">
       <form>
-        <div class="input-group date" id="datepickerCheckOut" name="datepickerCheckOut">
-          <input type="text" class="form-control">
+        <div class="input-group date">
+          <input type="text" class="form-control" id="datepickerCheckOut" name="datepickerCheckOut">
           <span class="input-group-append">
             <span class="input-group-text bg-white d-block">
               <i class="fa fa-calendar"></i>
@@ -67,9 +67,15 @@
       <input type="text" class="form-control" id="jumlah-kamar" name="jumlah-kamar" aria-describedby="emailHelp">
     </div>
     <div class="p-2 pt-0">
-      <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#idModal">Pesan</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#idModal">Pesan</button>
     </div>
   </div>
+  
+  <!-- alert -->
+  <div class="pt-4">
+    <?php Flasher::flash(); ?>
+  </div>
+
   <div>
     <h1 class="text-center mt-4">Tentang Kami</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quis facilis asperiores a officia harum, dicta iusto aperiam excepturi nisi animi quia necessitatibus quasi officiis soluta dolorum illo esse id repellendus qui accusantium. Nam eligendi accusamus qui similique cupiditate tempora ea, ad sed deserunt? Voluptatum officia omnis voluptates vero quibusdam vitae recusandae cum quas, iure molestiae dignissimos? Fugit, laboriosam soluta! Ipsam, accusantium sed! Cumque, blanditiis deleniti! Debitis fugiat voluptates accusantium laboriosam ad eius deleniti ipsam recusandae hic nulla nam neque, facere ex, obcaecati minus dolorem voluptas, magni mollitia ipsum corporis natus quia? Magnam culpa, aspernatur illo, doloribus possimus velit pariatur repudiandae alias neque modi nulla excepturi vero adipisci ratione magni corporis facere laboriosam nam perferendis. Repudiandae fugit magnam optio commodi libero incidunt soluta, deleniti suscipit quo non rem sequi officia corporis laborum illum repellat quae ullam nam ea! Maxime asperiores autem sunt maiores delectus quia quam dolorem eaque optio, ipsum quaerat ullam eveniet accusamus blanditiis, natus repudiandae corporis eos adipisci magni quidem in minus aut. Nulla ut atque quam ducimus optio assumenda velit asperiores, deserunt nesciunt. Nostrum, suscipit repudiandae! Necessitatibus, veritatis totam nam perspiciatis quos omnis vero accusamus esse fuga officiis est voluptate eos quo at inventore delectus velit ea!</p>
@@ -85,7 +91,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+
         <form action="<?= BASEURL; ?>/pemesanan/tambah" method="post">
+
           <div class="mb-1">
             <label for="nama-pemesanan" class="col-form-label">Nama Pemesanan:</label>
             <input type="text" class="form-control" id="nama-pemesanan" name="nama-pemesanan">
@@ -110,15 +118,14 @@
             <label for="tipe-kamar" class="col-form-label">Tipe Kamar:</label>
             <select class="form-select mb-3" aria-label=".form-select-lg example" id="tipe-kamar" name="tipe-kamar">
               <option selected>Pilih tipe kamar</option>
-              <option value="Deluxe">Tipe Deluxe</option>
-              <option value="Superior">Tipe Superior</option>
+              <option value="deluxe">Tipe Deluxe</option>
+              <option value="superior">Tipe Superior</option>
             </select>
           </div>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="sumbit" class="btn btn-primary">Konfirmasi Pemesanan</button>
+        <button type="submit" class="btn btn-primary">Konfirmasi Pemesanan</button>
         </form>
       </div>
     </div>
