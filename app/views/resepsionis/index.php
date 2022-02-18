@@ -52,7 +52,7 @@
           <td><?= $tamu['status_pemesanan']; ?></td>
           <td class="d-flex justify-content-evenly">
             <a href="<?= BASEURL; ?>/resepsionis/detail/<?= $tamu['id'] ?>" class="btn btn-info btn-sm" data-bs-target="#exampleModal">Detail</a>
-            <a href="<?= BASEURL; ?>/resepsionis/detail/<?= $tamu['id'] ?>" class="btn btn-primary btn-sm tampilModalUbah" data-bs-toggle="modal" data-bs-target="#idModal">Ubah</a>
+            <a href="<?= BASEURL; ?>/resepsionis/ubah/<?= $tamu['id'] ?>" class="btn btn-primary btn-sm tampilModalUbah" data-bs-toggle="modal" data-bs-target="#idModalResepsionis" data-id="<?=$tamu['id']; ?>">Ubah</a>
             <a href="<?= BASEURL; ?>/resepsionis/hapus/<?= $tamu['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('yakin?')">Hapus</a>
           </td>
         </tr>

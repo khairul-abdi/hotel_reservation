@@ -42,7 +42,7 @@
     <div class="p-2 pt-0">
       <form>
         <div class="input-group date">
-          <input type="text" class="form-control" id="datepickerCheckIn" name="datepickerCheckIn">
+          <input type="text" class="form-control datepickerCheckIn" id="datepickerCheckIn" name="datepickerCheckIn" autocomplete="off">
           <span class="input-group-append">
             <span class="input-group-text bg-white d-block">
               <i class="fa fa-calendar"></i>
@@ -54,7 +54,7 @@
     <div class="p-2 pt-0">
       <form>
         <div class="input-group date">
-          <input type="text" class="form-control" id="datepickerCheckOut" name="datepickerCheckOut">
+          <input type="text" class="form-control" id="datepickerCheckOut" name="datepickerCheckOut" autocomplete="off">
           <span class="input-group-append">
             <span class="input-group-text bg-white d-block">
               <i class="fa fa-calendar"></i>
@@ -67,7 +67,7 @@
       <input type="text" class="form-control" id="jumlah-kamar" name="jumlah-kamar" aria-describedby="emailHelp">
     </div>
     <div class="p-2 pt-0">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#idModal">Pesan</button>
+      <button type="button" class="btn btn-primary klikForDatePesan" data-bs-toggle="modal" data-bs-target="#idModal">Pesan</button>
     </div>
   </div>
   
@@ -125,7 +125,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Konfirmasi Pemesanan</button>
+        <button type="submit" class="btn btn-primary klikForDateKonfirmasi">Konfirmasi Pemesanan</button>
         </form>
       </div>
     </div>

@@ -1,12 +1,16 @@
-// $(function() {
+$(function() {
 
-//     $('.tombolTambahData').on('click', function () {
-//         $('#formModalLabel').html('Tambah Pemesanan')
-//         $('.modal-footer button[type=submit]').html('Tambah Data')
-//     })
+    $('.tombolTambahData').on('click', function () {
+        $('#formModalLabel').html('Tambah Pemesanan')
+        $('.modal-footer button[type=submit]').html('Tambah Data')
+    })
     
-//     $('.tampilModalUbah').on('click', function () {
-//         $('#formModalLabel').html('Ubah Pemesanan')
-//         $('.modal-footer button[type=submit]').html('Ubah Data')
-//     })
-// })
+    $('.tampilModalUbah').on('click', function () {
+        $('#formModalLabel').html('Ubah Pemesanan')
+        $('.modal-footer button[type=submit]').html('Ubah Data')
+
+        const id = $(this).data('id')
+        
+        
+    })
+})
